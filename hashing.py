@@ -8,6 +8,7 @@ W = 4
 MINHASH_PERMS = 64 # the bigger this is, the more hashes are generated per string, too big values no longer improve accuracy
 
 def chunkstring(string, length):
+	string = string.lower()
 	return list((string[0+i:length+i] for i in range(0, len(string), length)))
 
 
